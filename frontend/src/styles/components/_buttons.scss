@@ -1,0 +1,41 @@
+.btn {
+    display: block;
+    border: none;
+    padding: 1em 0;
+    text-align: center;
+    width: 100%;
+    border-radius: 6px;
+    font-size: $fs-200;
+    font-weight: $fw-light;
+    color: $clr-white;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background: $clr-red;
+
+    &:hover,
+    &:focus {
+        background: $clr-white;
+        color: $clr-dark-blue;
+    }
+}
+
+.btn--bookmark {
+    cursor: pointer;
+    background: #10141e7e;
+    height: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+
+    &:hover {
+        background: white;
+
+        svg {
+            path {
+                stroke: #000000;
+            }
+        }
+    }
+}

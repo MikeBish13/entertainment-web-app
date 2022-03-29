@@ -1,0 +1,14 @@
+input[type="password"] {
+    margin-bottom: 2.5rem;
+}
+
+.logo {
+    display: block;
+    margin: 3rem auto 0;
+    @include mq(tablet) {
+        margin: 5.5rem auto 0;
+    }
+    @include mq(desktop) {
+        margin: 4.875rem auto 0;
+    }
+}

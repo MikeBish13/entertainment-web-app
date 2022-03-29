@@ -1,0 +1,97 @@
+.header {
+  background: $clr-semi-dark-blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1rem;
+  @include mq(tablet) {
+      margin: 1.5rem;
+      border-radius: 10px;
+  }
+  @include mq(desktop) {
+      max-height: 45rem;
+      flex-direction: column;
+      position: sticky;
+      top: 2rem;
+      padding: 2.25rem 2rem;
+      border-radius: 20px;
+  }
+
+  &__logo {
+      @include mq(desktop) {
+          margin-bottom: 4.6rem;
+      }
+  }
+
+  &__avatar {
+    background: none;
+    border: none;
+    height: 1.5rem;
+    aspect-ratio: 1;
+    padding: 0;
+    cursor: pointer;
+    @include mq(tablet) {
+        height: 2rem;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      border: 1px solid $clr-white;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $clr-red;
+      }
+    }
+  }
+}
+
+.nav {
+    @include mq(desktop) {
+        margin-bottom: auto;
+    }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    @include mq(tablet) {
+        gap: 2rem;
+    }
+    @include mq(desktop) {
+        flex-direction: column;
+        align-items: start;
+        gap: 2.5rem;
+    }
+  }
+  &__link {
+    button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      &:hover,
+      &:focus {
+        svg {
+          path {
+            outline: none;
+            fill: $clr-red;
+          }
+        }
+      }
+      &.selected {
+          svg {
+              path {
+                  fill: $clr-white;
+              }
+          }
+      }
+    }
+  }
+}

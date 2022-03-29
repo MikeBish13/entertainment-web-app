@@ -1,0 +1,86 @@
+.movie {
+  position: relative;
+
+  picture {
+      position: relative;
+      cursor: pointer;
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  picture:hover {
+      .movie__hover {
+          visibility: visible;
+      }
+  }
+
+  &__hover {
+      visibility: hidden;
+      border-radius: 8px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      display: grid;
+      place-items: center;
+  }
+
+  &__play {
+      width: max-content;
+      background: #ffffff3a;
+      padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+
+      svg {
+          margin-right: 1rem;
+      }
+  }
+
+  &__details {
+    margin-top: 0.5rem;
+  }
+
+  &__info {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    p {
+      opacity: 75%;
+    }
+  }
+
+  &__title {
+    font-weight: $fw-med;
+    @include mq(tablet) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  &__bookmark {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    &--selected {
+      svg {
+        path {
+          stroke: $clr-white;
+          fill: $clr-white;
+        }
+      }
+    }
+  }
+}
+

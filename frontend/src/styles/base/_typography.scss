@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap');
+
+// Utility classes
+.heading-lg {
+    font-size: $fs-500;
+    font-weight: $fw-light;
+}
+
+.heading-md {
+    font-size: $fs-400;
+    font-weight: $fw-light;
+}
+
+.heading-sm {
+    font-size: $fs-400;
+    font-weight: $fw-med;
+}
+
+.heading-xs {
+    font-size: $fs-300;
+    font-weight: $fw-med;
+}
+
+.body-md {
+    font-size: $fs-200;
+    font-weight: $fw-light;
+}
+
+.body-s {
+    font-size: $fs-100;
+    font-weight: $fw-light;
+}

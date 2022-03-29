@@ -1,0 +1,33 @@
+.auth {
+    &__container {
+        background: $clr-semi-dark-blue;
+        width: 87%;
+        margin: 3.625rem auto 0;
+        border-radius: 10px;
+        max-width: 25rem;
+        padding: 1.5rem;
+        @include mq(tablet) {
+            padding: 2rem;
+        }
+    }
+    &__title {
+        margin-bottom: 2.5rem;
+        font-weight: $fw-light;
+        font-size: $fs-500;
+    }
+    &__input {
+        margin-bottom: 1.5rem;
+    }
+    &__submit {
+        margin-bottom: 1.5rem;
+    }
+    &__text {
+        text-align: center;
+        font-size: $fs-200;
+        font-weight: $fw-light;
+        a {
+            text-decoration: none;
+            color: $clr-red;
+        }
+    }
+}

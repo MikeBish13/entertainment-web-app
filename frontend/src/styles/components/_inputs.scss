@@ -1,0 +1,52 @@
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  background: none;
+  color: $clr-white;
+  border: none;
+  font-size: $fs-200;
+  font-weight: $fw-light;
+  border-bottom: 1px solid $clr-gray-blue;
+  padding: 0 0 0.9375em 1.2em;
+  caret-color: $clr-red;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $clr-white;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: .5rem 1rem;
+  @include mq(desktop) {
+      margin-top: 2.5rem;
+      padding-left: 0;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    color: $clr-white;
+    background: none;
+    border: none;
+    font-size: $fs-200;
+    font-weight: $fw-light;
+    margin-left: 1rem;
+    caret-color: $clr-red;
+    padding: 1em 0;
+    @include mq(tablet) {
+        padding: 0.5em 0;
+        margin-left: 1.5rem;
+    }
+    @include mq(tablet) {
+        font-size: $fs-400;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $clr-semi-dark-blue;
+    }
+  }
+}
