@@ -1,4 +1,19 @@
-input[type="text"],
+.input-container {
+  position: relative;
+}
+
+.error-msg {
+  color: $clr-red;
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+}
+
+.error-msg--general {
+  color: $clr-red;
+}
+
+input[type="email"],
 input[type="password"] {
   display: block;
   width: 100%;

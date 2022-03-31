@@ -18,7 +18,7 @@ const initialState = {
 // 1. 'user' data is received from the register form in the Register component
 // 2. The 'user' data is sent to a function called 'register' in the authService file where it is used to make an api call
 // 3. Any possible errors are then handled
-export const register = createAsyncThunk('auth/register', async (user, thunkAPI) => {
+export const registerUser = createAsyncThunk('auth/register', async (user, thunkAPI) => {
     try {
         return await authService.register(user);
     } catch (error) {
@@ -66,15 +66,15 @@ export const authSlice = createSlice({
     // The reducer updates state based on the progress of the API call 
     extraReducers: (builder) => {
         builder
-            .addCase(register.pending, (state) => {
+            .addCase(registerUser.pending, (state) => {
                 state.isLoading = true
             })
-            .addCase(register.fulfilled, (state, action) => {
+            .addCase(registerUser.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.isSuccess = true
                 state.user = action.payload
             })
-            .addCase(register.rejected, (state, action) => {
+            .addCase(registerUser.rejected, (state, action) => {
                 state.isLoading = false
                 state.isError = true
                 state.message = action.payload
