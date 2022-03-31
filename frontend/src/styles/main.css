@@ -419,7 +419,7 @@ input[type="password"]:focus {
 
 @media (min-width: 1000px) {
   .header {
-    max-height: 45rem;
+    max-height: 90vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

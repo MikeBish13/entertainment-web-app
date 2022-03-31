@@ -9,7 +9,7 @@
       border-radius: 10px;
   }
   @include mq(desktop) {
-      max-height: 45rem;
+      max-height: 90vh;
       flex-direction: column;
       position: sticky;
       top: 2rem;
